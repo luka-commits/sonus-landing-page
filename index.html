@@ -723,6 +723,7 @@
 
             <!-- Fix: all labels have for="id", all inputs have matching id + autocomplete -->
             <form id="quoteForm" class="space-y-6">
+                <input type="hidden" id="source" name="source" value="glasgow">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label for="name" class="block text-gray-700 font-semibold mb-2">Name *</label>
@@ -1004,6 +1005,7 @@
                 email: document.getElementById('email').value,
                 eventType: document.getElementById('eventType').value,
                 eventDetails: document.getElementById('eventDetails').value,
+                source: document.getElementById('source').value,
             };
 
             fetch('https://services.leadconnectorhq.com/hooks/FD5iyvEIHCLWm6yzH9Ff/webhook-trigger/0c28c51b-371b-4544-a9dd-d520a9b69e9b', {
